@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slor="start">
+      <ion-menu-button color="dark" menu="first"></ion-menu-button>
+    </ion-buttons>
+    <ion-title size="large" color="primary">Лабораторні роботи</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-title>
+      lab 2
+    </ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-title>
+      Made by Sofia Hrishina KN-31
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+<ion-card-header>
+<ion-card-title>
+  Zavdannya #1
+</ion-card-title>
+</ion-card-header>
+<ion-card-content>
+  <p class="p_background">Створити додаток для табулювання
+   і виведення на екран значення функції, також побудувати графік
+  функції</p>
+  <ion-item>
+    <ion-label positon="floating">хn</ion-label>
+    <ion-input type="number" id="xn" value="2.45" #Inputxn></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label positon="floating">хk</ion-label>
+    <ion-input type="number" id="xk" value="25.2" #Inputxk></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label positon="floating">a</ion-label>
+    <ion-input type="number" id="a" value="0.0" #Inputa></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label positon="floating">h</ion-label>
+    <ion-input type="number" id="h" value="0.1" #Inputh></ion-input>
+  </ion-item>
+  <ion-button expand="block" (click)="graphras(Inputxn.value,Inputxk.value,Inputa.value,Inputh.value)">Calculate</ion-button>
+  <ion-item>
+    <canvas #lineCanvas></canvas>
+  </ion-item>
+ 
+</ion-card-content>
+</ion-card>
+</ion-content>
