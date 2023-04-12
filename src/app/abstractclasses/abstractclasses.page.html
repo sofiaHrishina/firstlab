@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Лабораторна робота №4</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-title>Виконала Гришина Софія</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-title>Ex1 </ion-title>
+      <ion-note>Завдання 1. Скласти програму з абстрактним батьківським класом і двома
+        обєктами – нащадками.
+        Реалізувати циклічне виведення параметрів обєктів, використовуючи 
+        поліморфний контейнер -
+         масив обєктів базового класу (кількість обєктів = 5)
+        Завдання 2. Виконати обрахунки відповідно до варіанту</ion-note>
+      <ion-note>Батьківський клас - Автомобіль(поле назва), Нащадки : Вантажівка(поле – вантажопідйомність) Легковий(поле – об‘єм) Методи : Витрати пального
+        на 100км Вантажівка M=100*p / Легковий M=2,5*V</ion-note>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Input n</ion-label>
+        <ion-input type="number" value="5" #Inputn></ion-input>
+      </ion-item>
+      <ion-button (click)="ras(Inputn.value)">Calculate</ion-button>
+      <ion-list>
+        <ion-item *ngFor="let fig of figure">
+          {{ fig.show() }}
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
