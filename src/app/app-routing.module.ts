@@ -15,10 +15,6 @@ const routes: Routes = [
     loadChildren: () => import('./file/file.module').then( m => m.FilePageModule)
   },
   {
-    path: 'abstract-class',
-    loadChildren: () => import('./abstract-class/abstract-class.module').then( m => m.AbstractClassPageModule)
-  },
-  {
     path: 'abstractclasses',
     loadChildren: () => import('./abstractclasses/abstractclasses.module').then( m => m.AbstractclassesPageModule)
   }

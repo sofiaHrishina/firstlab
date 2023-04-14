@@ -14,9 +14,7 @@ export class AbstractclassesPage implements OnInit {
   sum: number =0;
   
     constructor() { }
-    getRandomInt(max: number){
-      return Math.floor(max);
-    }
+   
   ras(nn:any){
     this.figure = new Array();
     let n = parseInt(nn);
