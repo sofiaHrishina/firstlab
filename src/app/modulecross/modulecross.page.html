@@ -1,0 +1,50 @@
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-title>Ex1</ion-title>
+      <ion-note>Середньовічний король вирішив оголосити війну сусідній державі для чого необхідно сформувати своє військо та
+         розрахувати вартість його утримання та швидкість пересування. Після обліку наявних військових одиниць виявилось,
+          що у військо можна записати чарівників у легкій броні (вартість утримання 5 золотих на добу швидкість 5 км/ч), 
+          ополчення у легкій броні(вартість утримання 0, швидкість 5 км/ч) і катапульти(вартість утримання 0, швидкість 3 км/ч).
+           Необхідно сформувати військо з як мінімум 3 родів військ і розрахувати вартість утримання та швидкість. 
+           Результати такого планування необхідно виводити на екран.</ion-note>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Введіть кількість катапульт</ion-label>
+        <ion-input type="number" value="5" #Inputn></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Введіть кількість конниці</ion-label>
+        <ion-input type="number" value="5" #Inputn2></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Введіть кількість мобілізованого ополчення</ion-label>
+        <ion-input type="number" value="5" #Inputn3></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Введіть кількість днів</ion-label>
+        <ion-input type="number" value="2" #Inputd></ion-input>
+      </ion-item>
+      <ion-button (click)="Results(Inputn.value, Inputd.value, Inputn2.value, Inputn3.value) ">Calculate</ion-button>
+      <p *ngIf="totalPrice">Загальна вартість утримання війська за введену кількість днів: {{ totalPrice }}</p>
+      <p *ngIf="totalSpeed">Загальна швидкість всіх підрозділів армії: {{ totalSpeed }} км/год</p>
+      <ion-list>
+        <ion-item *ngFor="let fig of militaryU">
+          Назва: {{ fig.printInfo().name }}, Швидкість: {{ fig.printInfo().speed }}, Ціна: {{ fig.printInfo().price }}
+        </ion-item>
+      </ion-list>
+      <ion-list>
+        <ion-item *ngFor="let fig2 of militaryU2">
+          Назва: {{ fig2.name }}, Швидкість: {{ fig2.speed }}, Ціна: {{ fig2.price }}
+        </ion-item>
+      </ion-list>
+      <ion-list>
+        <ion-item *ngFor="let fig3 of militaryU3">
+          Назва: {{ fig3.name }}, Швидкість: {{ fig3.speed }}, Ціна: {{ fig3.price }}
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

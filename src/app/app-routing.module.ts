@@ -17,6 +17,14 @@ const routes: Routes = [
   {
     path: 'abstractclasses',
     loadChildren: () => import('./abstractclasses/abstractclasses.module').then( m => m.AbstractclassesPageModule)
+  },
+  {
+    path: 'interface',
+    loadChildren: () => import('./interface/interface.module').then( m => m.InterfacePageModule)
+  },
+  {
+    path: 'modulecross',
+    loadChildren: () => import('./modulecross/modulecross.module').then( m => m.ModulecrossPageModule)
   }
 ];
 @NgModule({
