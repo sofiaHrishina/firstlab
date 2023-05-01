@@ -1,5 +1,31 @@
 <app-my-header name="Лабораторна робота №6"></app-my-header>
 
 <ion-content>
-
+<ion-card>
+    <ion-card-header>
+        <ion-title size="large">Завдання</ion-title>
+        <p>Дана наступна ієрархія класів : </p>
+        <p>Організація, страхова компанія, нафтогазова компанія, завод</p>
+    </ion-card-header>
+    <ion-card-content>
+        <ion-button (click)="ras()">Розрахунок</ion-button>
+        <div class="ion-margin-top">
+            <ion-text color="primary" size="large" weight="bold">Страхова компанія</ion-text>
+            <ion-item><p>{{ result1 }}</p></ion-item>
+            <ion-item><p>{{ lisenceInf1 }}</p></ion-item>
+        </div>
+       
+        <div class="ion-margin-top">
+            <ion-text color="primary" size="large" weight="bold">Нафтогазова компанія</ion-text>
+            <ion-item><p>{{ result2 }}</p></ion-item>
+            <ion-item><p>{{ lisenceInf2 }}</p></ion-item>
+        </div>
+       
+        <div class="ion-margin-top">
+            <ion-text color="primary" size="large" weight="bold">Завод солодощів</ion-text>
+            <ion-item><p>{{ result3 }}</p></ion-item>
+        </div>
+        
+    </ion-card-content>
+</ion-card>
 </ion-content>
