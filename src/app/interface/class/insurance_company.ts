@@ -1,5 +1,3 @@
-//import { getInfo } from "../interfaces/getInfo";
-//import { Random } from "./random";
 import { Organization } from './organization'
 import { i_am_Company } from '../interfaces/i_am_company'
 import { hasLicense } from '../interfaces/hasLicense';

@@ -25,6 +25,10 @@ const routes: Routes = [
   {
     path: 'modulecross',
     loadChildren: () => import('./modulecross/modulecross.module').then( m => m.ModulecrossPageModule)
+  },
+  {
+    path: 'servicepage',
+    loadChildren: () => import('./servicepage/servicepage.module').then( m => m.ServicepagePageModule)
   }
 ];
 @NgModule({

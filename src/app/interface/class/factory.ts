@@ -16,7 +16,7 @@ export class Factory extends Organization implements getInfo {
       }
     
       show(): string {
-        return this.name + ", founder is " + this.founder +` Production costs: ${this.production_costs}, Production volume: ${this.production_volume}`;
+        return this.name + ", founder is " + this.founder +` Production costs: ${this.production_costs}$, Production volume: ${this.production_volume}$`;
       }
     }
 
